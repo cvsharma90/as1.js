@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>assignment1-js</title>
+</head>
+<body>
+
+
+     <!-- QUESTION-1 -->
+    <script>
+        var str1 = 'Today is'
+        var str2 = '      a beautiful day     '
+        var str3 = ' In Hawaii.     '
+
+        var Result = str1 + " " +  str2.trim() + " "+ str3.trim()
+       console.log(Result)
+
+        //QUESTION 2-------------------------------------------------------
+
+        var enteredAlphabet = prompt("enter the input");
+        if(typeof enteredAlphabet === "string"){
+            enteredAlphabet = enteredAlphabet.toLowerCase();
+        }else if(typeof enteredAlphabet === "number"){
+            enteredAlphabet = "number"
+        }
+
+        switch(enteredAlphabet){
+            case "a":
+            case "e":
+            case "i":
+            case "o":
+            case "u":
+           
+                console.log("enteredAlphabet is vowel")
+                break;
+            case "number":     
+            
+            console.log("enteredAlphabet is number")
+                break;          
+
+            default:
+                    console.log("enteredAlphabet is non-vowel or NaN")
+        }
+
+
+        // QUESTION 3 ------------------------------------------------------------
+
+        let a = parseInt(prompt("pls enter the first no."))
+        let b = parseInt(prompt("pls enter the second no."))
+        
+        let c ;
+        let operator = "*";
+        switch(operator){
+           case "+" :
+            c = a + b
+            break;
+
+           case "-" :
+            c = a-b;
+            break;
+            case "*" :
+               c = a*b;
+               break;
+            case "/" :
+                c = a/b;
+                break;
+                
+            default:
+                console.log("there is some error")    
+
+        }
+
+        console.log(c)
+
+
+        // QUESTION 4 -------------------------------------------------------------------------
+
+            let x = prompt("pls enter first side of the trianle")
+            let y =prompt("pls enter second side of the trianle")
+            let z = prompt("pls enter third side of the trianle")
+           
+            
+            if(x===y&&y===z&&z===x){
+              console.log("Triangle is Equilateral")
+            }else if(x===y || y===z ||z===x){
+                console.log("Triangle is isosceles")
+            }else{
+                console.log("Triangle is scalne")
+            }
+
+
+            // QUESTION 5---------------------------------------------------
+
+            let unit = prompt("enter the no. of units consumed");
+
+            let Bill = 0;
+            if(unit<=50){
+                Bill = unit*0.50;
+            }else if(unit>=51 && unit<=150){
+               Bill = (50*0.50) + (unit-50)*0.75;
+            }else if(unit>=151 && unit<=250){
+                Bill = (50*0.50) + (100*0.75) + (unit-150)*1.20
+            }else if(unit>250){
+                Bill = ((50*0.50) + (100*0.75) + (unit-150)*1.20 + (unit-250)*1.5)*1.20
+            }
+
+            console.log(Bill);
+
+
+
+       </script>
+
+      
+
+       
+        
+
+</body>
+</html>
